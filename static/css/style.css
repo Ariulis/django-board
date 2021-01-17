@@ -14,6 +14,6 @@ img.main-image {
 img.additional-image {
   width: 180px;
 }
-.nav-item .dropdown-menu {
-  left: -45px;
+.alert {
+  text-align: center;
 }
