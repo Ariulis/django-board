@@ -5,23 +5,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Django{% block title %}{% endblock title %}</title>
     <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
     {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>
-    <div class="container-fluid">
-        <header>
-            {% include 'main/_navbar.html' %}
-        </header>
-        <main>
+<body class="container-fluid">
+    <header class="mb-4">
+        <h1 class="display-2 text-center">Объявления</h1>
+    </header>
+    <div class="row">
+        {% include 'main/_sidebar.html' %}
+    </div>
+    <div class="row">
+        {% include 'main/_navbar.html' %}
+        <section class="col border py-2">
             {% include 'main/_messages.html' %}
             {% block content %}{% endblock content %}
-        </main>
-        {% block pagination %}{% endblock pagination %}
+            {% block pagination %}{% endblock pagination %}
+        </section>
     </div>
+    <footer class="mt-3">
+        <p class="text-right font-italic">&copy; Читатели</p>
+    </footer>
     {% bootstrap_javascript jquery='full' %}
 </body>
 </html>

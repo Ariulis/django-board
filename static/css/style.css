@@ -1,19 +1,19 @@
-html, body {
-    min-height: 100%;
-    padding: 0;
-    margin: 0;
-}
 .container-fluid {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
+  overflow: hidden;
 }
-main {
-    padding: 0 15px;
-    flex: 1;
+header h1 {
+  background: url("../img/bg.jpg") left / auto 100% no-repeat,
+    url("../img/bg.jpg") right / auto 100% no-repeat;
 }
-h1, h2, h3 {
-    text-align: center;
-    margin-top: 10px;
+.root {
+  font-size: larger;
+}
+img.main-image {
+  width: 300px;
+}
+img.additional-image {
+  width: 180px;
+}
+.nav-item .dropdown-menu {
+  left: -45px;
 }
